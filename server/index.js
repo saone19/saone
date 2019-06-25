@@ -1,19 +1,18 @@
-const functions = require('firebase-functions')
 const express = require('express')
+const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
-const config = {
-  dev: false,
-  buildDir: `nuxt`,
-  build: {
-    publicPath: `/assets/`
-  }
-}
-// Init Nuxt.js
-const nuxt = new Nuxt(config)
+// Import and Set Nuxt.js options
+const config = require('../nuxt.config.js')
+config.dev = !(process.env.NODE_ENV === 'production')
 
-async function handleRequest(req, res) {
+async function start() {
+  // Init Nuxt.js
+  const nuxt = new Nuxt(config)
+
+  const { host, port } = nuxt.options.server
+
   // Build only in dev mode
   if (config.dev) {
     const builder = new Builder(nuxt)
@@ -22,7 +21,14 @@ async function handleRequest(req, res) {
     await nuxt.ready()
   }
 
-  return nuxt.render(req, res)
+  // Give nuxt middleware to express
+  app.use(nuxt.render)
+
+  // Listen the server
+  app.listen(port, host)
+  consola.ready({
+    message: `Server listening on http://${host}:${port}`,
+    badge: true
+  })
 }
-app.use(handleRequest)
-exports.ssr = functions.https.onRequest(app)
+start()

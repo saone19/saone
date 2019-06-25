@@ -10,10 +10,11 @@
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate"
+    "gen": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
+    "aos": "^3.0.0-beta.6",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "node-sass": "^4.12.0",

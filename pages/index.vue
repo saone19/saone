@@ -1,98 +1,68 @@
 <template>
-  <div class="container">
-    <logo />
-    <h1 class="title">
-      <span class="title__text">The SAONE Project</span>
-    </h1>
+  <div class="index">
+    <s-carousel id="carousel" />
+    <s-introduction id="introduction" />
+    <s-movie id="movie" />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import SIntroduction from '../components/introduction'
+import SCarousel from '../components/carousel'
+import SMovie from '../components/movie'
 
 export default {
   components: {
-    Logo
+    SCarousel,
+    SIntroduction,
+    SMovie
+  },
+  data() {
+    return {
+      current: 0,
+      scrolling: false,
+      anchors: ['carousel', 'introduction', 'movie']
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', e => e.preventDefault())
+    document.addEventListener('wheel', e => e.preventDefault(), {
+      passive: false
+    })
+    window.onmousewheel = ({ deltaY }) => {
+      const threshold = 0
+      if (this.scrolling) {
+        return
+      }
+
+      if (this.current !== 0 && deltaY < -threshold) {
+        this.current -= 1
+        console.log('-')
+      } else if (
+        this.current !== this.anchors.length - 1 &&
+        deltaY > threshold
+      ) {
+        this.current += 1
+        console.log('+')
+      }
+
+      document
+        .getElementById(this.anchors[this.current])
+        .scrollIntoView({ behavior: 'smooth' })
+
+      this.scrolling = true
+      setTimeout(() => {
+        this.scrolling = false
+      }, 1000)
+    }
   }
 }
 </script>
 
 <style lang="scss">
 @import '../assets/color.scss';
-
-.container {
-  height: 100vh;
-  overflow: hidden;
-}
-.title {
-  position: relative;
-  margin-top: 5rem;
-  color: #fff;
-  text-align: center;
-  height: 5rem;
-  line-height: 5rem;
-  text-shadow: 0 0 5px #000;
-  border-radius: 1rem;
-  transform: skewY(8deg);
-  background-image: linear-gradient(
-    to right,
-    $theme-light-orange,
-    $theme-dark-orange
-  );
-  &::before {
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
-    left: 25vw;
-    content: '';
-    width: 120vw;
-    display: block;
-    height: 2rem;
-    border-radius: 0.5rem;
-    transform: rotate(-70deg);
-    box-shadow: 0 0 5px #000;
-    background-image: linear-gradient(
-      to right,
-      $theme-light-orange,
-      $theme-dark-orange
-    );
-  }
-
-  &::after {
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
-    left: 18vw;
-    content: '';
-    width: 120vw;
-    display: block;
-    height: 2rem;
-    border-radius: 0.5rem;
-    transform: rotate(-70deg);
-    box-shadow: 0 0 5px #000;
-    background-image: linear-gradient(
-      to right,
-      $theme-light-orange,
-      $theme-dark-orange
-    );
-  }
-  &__text {
-    display: inline-block;
-    animation: move 3s ease-in-out infinite;
-  }
-}
-@keyframes move {
-  0% {
-    opacity: 0;
-    transform: translateX(2rem);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-2rem);
-  }
+.index {
+  height: 300vh;
+  width: 100vw;
 }
 </style>

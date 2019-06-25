@@ -1,8 +1,21 @@
 <template>
   <div>
+    <s-logo />
     <nuxt />
+    <s-footer />
   </div>
 </template>
+
+<script>
+import SLogo from '../components/logo'
+import SFooter from '../components/footer'
+export default {
+  components: {
+    SLogo,
+    SFooter
+  }
+}
+</script>
 
 <style lang="scss">
 @import '../assets/color.scss';
@@ -26,6 +39,12 @@ html {
 }
 
 html {
-  background-color: $theme-black;
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+    20deg,
+    $theme-demo-orange,
+    $theme-demo-light-orange,
+    $theme-demo-orange
+  );
 }
 </style>

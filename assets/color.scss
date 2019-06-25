@@ -2,3 +2,11 @@ $theme-black: #2d132c;
 $theme-dark-orange: #801336;
 $theme-middle-orange: #c72c41;
 $theme-light-orange: #ee4540;
+
+$theme-demo-orange: #f08500;
+$theme-demo-light-orange: #f6a900;
+
+@mixin fullpage {
+    width: 100vw;
+    height: 100vh;
+}
