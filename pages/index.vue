@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <s-carousel id="carousel" />
+    <s-carousel id="home" />
     <s-introduction id="introduction" />
     <s-movie id="movie" />
   </div>
@@ -21,7 +21,7 @@ export default {
     return {
       current: 0,
       scrolling: false,
-      anchors: ['carousel', 'introduction', 'movie']
+      anchors: ['home', 'introduction', 'movie']
     }
   },
   mounted() {
@@ -29,6 +29,15 @@ export default {
     document.addEventListener('wheel', e => e.preventDefault(), {
       passive: false
     })
+    window.addEventListener(
+      'hashchange',
+      () => {
+        document
+          .getElementById(window.location.hash.replace('#', '') || 'home')
+          .scrollIntoView({ behavior: 'smooth' })
+      },
+      false
+    )
     window.onmousewheel = ({ deltaY }) => {
       const threshold = 0
       if (this.scrolling) {
@@ -37,19 +46,21 @@ export default {
 
       if (this.current !== 0 && deltaY < -threshold) {
         this.current -= 1
-        console.log('-')
       } else if (
         this.current !== this.anchors.length - 1 &&
         deltaY > threshold
       ) {
         this.current += 1
-        console.log('+')
       }
 
       document
         .getElementById(this.anchors[this.current])
         .scrollIntoView({ behavior: 'smooth' })
-
+      window.history.pushState(
+        {},
+        null,
+        window.location.pathname + '#' + this.anchors[this.current]
+      )
       this.scrolling = true
       setTimeout(() => {
         this.scrolling = false

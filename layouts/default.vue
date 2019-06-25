@@ -1,6 +1,7 @@
 <template>
   <div>
     <s-logo />
+    <s-navigator />
     <nuxt />
     <s-footer />
   </div>
@@ -9,10 +10,12 @@
 <script>
 import SLogo from '../components/logo'
 import SFooter from '../components/footer'
+import SNavigator from '../components/navigator'
 export default {
   components: {
     SLogo,
-    SFooter
+    SFooter,
+    SNavigator
   }
 }
 </script>
@@ -41,8 +44,8 @@ html {
 html {
   background-size: 200% 200%;
   background-image: linear-gradient(
-    20deg,
-    $theme-demo-orange,
+    -60deg,
+    $theme-dark-orange,
     $theme-demo-light-orange,
     $theme-demo-orange
   );
