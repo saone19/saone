@@ -44,7 +44,7 @@ html {
 html {
   background-size: 200% 200%;
   background-image: linear-gradient(
-    -60deg,
+    20deg,
     $theme-dark-orange,
     $theme-demo-light-orange,
     $theme-demo-orange

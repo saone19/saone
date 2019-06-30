@@ -21,14 +21,20 @@
         </div>
       </div>
     </div>
+
+    <s-section-title text="Movie" />
   </section>
 </template>
 
 <script>
 import 'aos/dist/aos.css'
 import AOS from 'aos'
+import sSectionTitle from './sectionTitle'
 
 export default {
+  components: {
+    sSectionTitle
+  },
   data() {
     return {}
   },
@@ -60,6 +66,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   &-video {
     width: 48%;
@@ -75,6 +82,33 @@ export default {
   }
   &-play {
     font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .movie {
+    &-title {
+      font-size: 3rem;
+    }
+    &-time {
+      font-size: 1rem;
+    }
+    &-content {
+      margin-top: 3rem;
+      justify-content: center;
+    }
+    &-video,
+    &-info {
+      margin-bottom: 1rem;
+      width: 100%;
+      font-size: 1.4rem;
+      &-txt {
+        margin-bottom: 1rem;
+      }
+    }
+    &-play {
+      font-size: 2rem;
+    }
   }
 }
 </style>

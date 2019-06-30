@@ -29,6 +29,7 @@ export default {
     document.addEventListener('wheel', e => e.preventDefault(), {
       passive: false
     })
+    window.ontouchmove = e => e.preventDefault()
     window.addEventListener(
       'hashchange',
       () => {
@@ -73,6 +74,7 @@ export default {
 <style lang="scss">
 @import '../assets/color.scss';
 .index {
+  overflow: hidden;
   height: 300vh;
   width: 100vw;
 }

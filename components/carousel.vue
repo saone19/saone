@@ -63,7 +63,7 @@ export default {
   transition: all 1.4s ease;
 }
 .carousel-fade-enter {
-  transform: translateX(10px);
+  //transform: translateX(10px);
   opacity: 0;
 }
 

@@ -1,16 +1,28 @@
 <template>
   <section class="challengers">
-    <h1 class="title">
+    <h2 class="title">
       WE’RE CHALLENGERS FROM
       <transition name="country-fade" mode="out-in">
         <span :key="country" class="country">{{ country }}.</span>
       </transition>
-    </h1>
+    </h2>
+    <s-section-title text="Introduction" />
+    <div class="hexagon-wrapper">
+      <s-hexagon class="hexagon-1" height="200" />
+      <s-hexagon class="hexagon-2" height="350" />
+      <s-hexagon class="hexagon-3" height="100" />
+    </div>
   </section>
 </template>
 
 <script>
+import sHexagon from './hexagon'
+import sSectionTitle from './sectionTitle'
 export default {
+  components: {
+    sHexagon,
+    sSectionTitle
+  },
   data() {
     return {
       current: 0,
@@ -21,7 +33,6 @@ export default {
         'CHINA🇨🇳',
         'MALAYSIA🇲🇾',
         'INDONESIA🇮🇩',
-        'YEMEN🇾🇪',
         'VIETNAM🇻🇳'
       ]
     }
@@ -73,5 +84,34 @@ export default {
   display: inline-block;
   font-size: 3rem;
   vertical-align: middle;
+}
+.hexagon {
+  &-wrapper {
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
+  }
+  &-1 {
+    left: 30vw;
+    top: 20vh;
+  }
+  &-2 {
+    left: 40vw;
+    top: 40vh;
+  }
+  &-3 {
+    left: 70vw;
+    top: 30vh;
+    transform: rotate(30deg);
+  }
+}
+@media screen and (max-width: 900px) {
+  .title {
+    margin-top: 35vh;
+  }
+  .country {
+    display: block;
+  }
 }
 </style>
