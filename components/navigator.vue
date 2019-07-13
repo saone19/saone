@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      :class="[{ 'humberger--open': open }, 'humberger']"
-      @click="toggleOpen"
-    >
+    <div :class="[{ 'humberger--open': open }, 'humberger']" @click="toggleOpen">
       <span class="humberger-line"></span>
       <span class="humberger-line"></span>
     </div>
@@ -30,11 +27,7 @@
           </transition-group>
           <div class="nav-list-img-wrapper">
             <transition name="wrapper-fade" mode="out-in">
-              <div
-                :key="hover"
-                class="nav-list-img"
-                :style="{ background: preview[hover] }"
-              ></div>
+              <div :key="hover" class="nav-list-img" :style="{ background: preview[hover] }"></div>
             </transition>
           </div>
         </nav>
@@ -51,7 +44,7 @@ export default {
       hover: -1,
       preview: ['hotpink', 'white', 'cyan', 'yellowgreen', 'skyblue', 'ivory'],
       links: [
-        { url: '/#home', name: 'HOMEPAGE' },
+        { url: '/#top', name: 'HOMEPAGE' },
         { url: '/#introduction', name: 'INTRODUCTION' },
         { url: '/#movie', name: 'MOVIE' },
         { url: '/#', name: 'MV' },
@@ -96,8 +89,8 @@ export default {
     display: inline-block;
     width: 100%;
     height: 3px;
-    background-color: $theme-middle-orange;
-    box-shadow: 0 0 2px #000;
+    background-color: #fff;
+    box-shadow: 0 0 5px #000;
   }
 
   $translate-size: 4px;

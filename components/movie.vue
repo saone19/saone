@@ -8,12 +8,8 @@
       <div class="movie-content">
         <div data-aos="fade-up-right" class="movie-video"></div>
         <div data-aos="fade-up-left" class="movie-info">
-          <p class="movie-info-txt">
-            Director Daron iusdcisdc wdicu wec weciuibi
-          </p>
-          <p class="movie-info-txt">
-            qwdiuhwedjkn wehweuhd weudue wedweuh fjgjvfyxggi erv.
-          </p>
+          <p class="movie-info-txt">Director Daron iusdcisdc wdicu wec weciuibi</p>
+          <p class="movie-info-txt">qwdiuhwedjkn wehweuhd weudue wedweuh fjgjvfyxggi erv.</p>
 
           <p class="movie-play">
             <strong>play</strong>
@@ -23,24 +19,27 @@
     </div>
 
     <s-section-title text="Movie" />
+    <s-footer />
   </section>
 </template>
 
 <script>
-import 'aos/dist/aos.css'
-import AOS from 'aos'
+//import 'aos/dist/aos.css'
+import SFooter from '../components/footer'
+//import AOS from 'aos'
 import sSectionTitle from './sectionTitle'
 
 export default {
   components: {
-    sSectionTitle
+    sSectionTitle,
+    SFooter
   },
   data() {
     return {}
   },
   computed: {},
   mounted() {
-    AOS.init()
+    //    AOS.init()
   }
 }
 </script>

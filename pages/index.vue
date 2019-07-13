@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <s-top id="top" />
     <s-carousel id="home" />
     <s-introduction id="introduction" />
     <s-movie id="movie" />
@@ -10,9 +11,11 @@
 import SIntroduction from '../components/introduction'
 import SCarousel from '../components/carousel'
 import SMovie from '../components/movie'
+import STop from '../components/top'
 
 export default {
   components: {
+    STop,
     SCarousel,
     SIntroduction,
     SMovie
@@ -21,7 +24,7 @@ export default {
     return {
       current: 0,
       scrolling: false,
-      anchors: ['home', 'introduction', 'movie']
+      anchors: ['top', 'home', 'introduction', 'movie']
     }
   },
   mounted() {
