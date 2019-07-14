@@ -33,7 +33,13 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-143792953-1'
+      }
+    ]
     // '@nuxtjs/eslint-module'
   ],
   /*
