@@ -445,7 +445,7 @@ export default {
     }
     const fadeIn = {
       from: {
-        opacity: 0
+        opacity: 01
       },
       to: {
         opacity: 1
@@ -548,7 +548,10 @@ export default {
 #building-right-front,
 #building-sola-city,
 #boy,
-#girl{
+#girl,
+#flower,
+#leaf,
+#plants{
   opacity: 0;
 }
 </style>
