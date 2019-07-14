@@ -153,12 +153,12 @@ export default {
         cursor: pointer;
         a {
           display: block;
-          color: $theme-dark-orange;
+          color: #555;
         }
       }
       a {
         transition: 0.3s all ease-in-out;
-        color: $theme-demo-orange;
+        color: #eee;
         font-size: 2rem;
         text-decoration: none;
       }

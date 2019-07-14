@@ -57,7 +57,7 @@ export default {
   display: flex;
 }
 .title {
-  color: $theme-dark-orange;
+  color: beige;
   font-size: 2rem;
   margin-top: 45vh;
   width: 80vw;

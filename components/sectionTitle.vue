@@ -1,7 +1,5 @@
 <template>
-  <h2 class="section-title" :style="{ '--content': `'${text}'` }">
-    {{ text }}
-  </h2>
+  <h2 class="section-title" :style="{ '--content': `'${text}'` }">{{ text }}</h2>
 </template>
 
 <script>
@@ -17,15 +15,16 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/color.scss';
 .section-title {
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 5rem;
   position: absolute;
   writing-mode: vertical-rl;
   transform: rotateZ(180deg);
-  color: $theme-middle-orange;
+  color: skyblue;
   right: 1rem;
   bottom: 3rem;
   &::after {
+    opacity: 0.5;
     position: absolute;
     color: transparent;
     top: 10px;

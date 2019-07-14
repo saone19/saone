@@ -440,8 +440,8 @@ export default {
     const tl = new TimelineMax({ delay: 0 })
     const appear = {
       time: 0.3,
-      from: { y: 1000 },
-      to: { y: 0, ease: Elastic.easeOut.config(1, 0.8) }
+      from: {opacity:0, y: 1000 },
+      to: { opacity:1,y: 0, ease: Elastic.easeOut.config(1, 0.8) }
     }
     const fadeIn = {
       from: {
@@ -508,11 +508,11 @@ export default {
       })
 
       TweenMax.to('#plants', 1, {
-        transform: `translate3d(${x / 30}px,${y / 30}px,0)`
+        transform: `translate3d(${- x / 30}px,${- y / 30}px,0)`
       })
 
       TweenMax.to('#cloud', 1, {
-        transform: `translate3d(${x / 20}px,${y / 20}px,0)`
+        transform: `translate3d(${- x / 20}px,${- y / 20}px,0)`
       })
 
       if (x>0){
@@ -541,5 +541,14 @@ export default {
 }
 .svg {
   height: 100%;
+}
+
+#building-left,
+#building-right-behind,
+#building-right-front,
+#building-sola-city,
+#boy,
+#girl{
+  opacity: 0;
 }
 </style>

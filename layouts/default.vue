@@ -40,11 +40,12 @@ html {
 
 html {
   background-size: 200% 200%;
-  background-image: linear-gradient(
-    20deg,
-    $theme-dark-orange,
-    $theme-demo-light-orange,
-    $theme-demo-orange
-  );
+  background-color: rgb(3, 0, 69);
+  //background-image: linear-gradient(
+  //  20deg,
+  //  $theme-dark-orange,
+  //  $theme-demo-light-orange,
+  //  $theme-demo-orange
+  //);
 }
 </style>

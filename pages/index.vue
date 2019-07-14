@@ -1,30 +1,32 @@
 <template>
   <div class="index">
     <s-top id="top" />
-    <s-carousel id="home" />
     <s-introduction id="introduction" />
+    <s-maki id="maki" />
     <s-movie id="movie" />
   </div>
 </template>
 
 <script>
 import SIntroduction from '../components/introduction'
-import SCarousel from '../components/carousel'
+//import SCarousel from '../components/carousel'
 import SMovie from '../components/movie'
+import SMaki from '../components/maki'
 import STop from '../components/top'
 
 export default {
   components: {
     STop,
-    SCarousel,
+    //    SCarousel,
     SIntroduction,
+    SMaki,
     SMovie
   },
   data() {
     return {
       current: 0,
       scrolling: false,
-      anchors: ['top', 'home', 'introduction', 'movie']
+      anchors: ['top', 'introduction', 'maki', 'movie']
     }
   },
   mounted() {

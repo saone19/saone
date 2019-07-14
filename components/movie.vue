@@ -47,7 +47,7 @@ export default {
 <style lang="scss">
 @import '../assets/color.scss';
 .movie {
-  color: $theme-dark-orange;
+  color: lightblue;
   @include fullpage();
   display: flex;
   &-title {
@@ -70,7 +70,7 @@ export default {
   &-video {
     width: 48%;
     height: 15rem;
-    background-color: #222;
+    background-color: #ccc;
   }
   &-info {
     width: 48%;

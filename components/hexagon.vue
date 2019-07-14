@@ -11,7 +11,7 @@
       <g>
         <path
           class="path"
-          stroke="#d3810f"
+          stroke="#607D8B"
           stroke-width="10"
           stroke-miterlimit="0"
           fill="transparent"
