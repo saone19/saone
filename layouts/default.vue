@@ -16,6 +16,7 @@ export default {
   },
   data() {
     return {
+      touchY: 0,
       current: 0,
       navigating: false,
       view: ['/', 'challenger', 'teacher', 'music-video', 'short-film']
@@ -28,24 +29,42 @@ export default {
     }
   },
   mounted() {
-    window.onmousewheel = ({ deltaY }) => {
+    const handleNavigation = deltaY => {
       const threshold = 0
 
       if (this.navigating) {
         return
       }
 
+      this.navigating = true
+      setTimeout(() => {
+        this.navigating = false
+      }, 1000)
+
       if (this.current !== 0 && deltaY < -threshold) {
         this.current -= 1
       } else if (this.current !== this.view.length - 1 && deltaY > threshold) {
         this.current += 1
       }
-
-      this.navigating = true
-      setTimeout(() => {
-        this.navigating = false
-      }, 300)
     }
+    window.addEventListener('mousewheel', ({ deltaY }) =>
+      handleNavigation(deltaY)
+    )
+
+    window.addEventListener(
+      'touchstart',
+      e => (this.touchY = e.touches[0].pageY),
+      false
+    )
+
+    window.addEventListener(
+      'touchmove',
+      e => {
+        deltaY = this.touchY - e.touches[0].pageY
+        handleNavigation(deltaY)
+      },
+      false
+    )
   }
 }
 </script>

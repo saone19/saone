@@ -44,6 +44,7 @@ export default {
   display: flex;
   &-title {
     font-size: 5rem;
+    margin-bottom: 2rem;
   }
   &-byline {
     display: block;
@@ -76,6 +77,7 @@ export default {
 @media screen and (max-width: 900px) {
   .content {
     &-title {
+      margin-bottom: 0;
       font-size: 3rem;
     }
     &-time {

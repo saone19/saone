@@ -923,5 +923,6 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 </style>
