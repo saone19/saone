@@ -1766,4 +1766,21 @@ export default {
 #plants {
   opacity: 0;
 }
+
+@media screen and (max-width: 640px) {
+  .svg {
+    position: relative;
+  }
+  #building-left,
+  #building-right-behind,
+  #building-right-front,
+  #building-middle,
+  #boy,
+  #girl,
+  #flower,
+  #leaf,
+  #plants {
+    transform: scale(0.55) translateY(105vh);
+  }
+}
 </style>

@@ -1,13 +1,13 @@
 <template>
   <main class="challenger">
-    <h2 class="title">
+    <h2 class="challenger-title">
       WE’RE CHALLENGERS FROM
       <transition name="country-fade" mode="out-in">
         <span :key="country" class="country">{{ country }}.</span>
       </transition>
     </h2>
     <div class="challenger-wrapper">
-      <s-challenger-svg />
+      <s-challenger-svg class="challenger-svg" />
     </div>
   </main>
 </template>
@@ -51,14 +51,14 @@ export default {
 .challenger {
   @include fullpage();
   display: flex;
-}
-.title {
-  color: beige;
-  font-size: 2rem;
-  margin-top: 40vh;
-  width: 80vw;
-  height: fit-content;
-  margin-left: 10vw;
+  &-title {
+    color: beige;
+    font-size: 2rem;
+    margin-top: 40vh;
+    width: 80vw;
+    height: fit-content;
+    margin-left: 10vw;
+  }
 }
 
 .country-fade-enter-active {
@@ -95,11 +95,26 @@ export default {
   }
 }
 @media screen and (max-width: 900px) {
-  .title {
-    margin-top: 35vh;
+  .challenger {
+    &-title {
+      margin-top: 35vh;
+    }
   }
   .country {
     display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .challenger {
+    &-title {
+      margin-top: 25vh;
+    }
+    &-svg {
+      height: 50vh;
+      width: unset;
+      left: -70vw;
+    }
   }
 }
 </style>

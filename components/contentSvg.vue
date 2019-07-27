@@ -904,15 +904,14 @@ import { TweenMax, TimelineMax, Elastic, Back } from 'gsap'
 export default {
   mounted() {
     window.addEventListener('mousemove', ({ clientX, clientY }) => {
-      const x = clientX - window.innerWidth / 2
       const y = clientY - window.innerHeight / 2
 
       TweenMax.to('#wave-like-1', 1, {
-        transform: `translate3d(${182 + x / 20}px,${-354 + y / 10}px,0)`
+        transform: `translate3d(182.3px,${-354.2 + y / 10}px,0)`
       })
 
       TweenMax.to('#wave-like-2', 1, {
-        transform: `translate3d(${182 + -x / 30}px,${-354 - y / 20}px,0)`
+        transform: `translate3d(182.3px,${-354.2 - y / 15}px,0)`
       })
     })
   }

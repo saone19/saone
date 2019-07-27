@@ -18,13 +18,12 @@ export default {
     return {
       current: 0,
       navigating: false,
-      view: ['/', 'challenger', 'teacher', 'short-film']
+      view: ['/', 'challenger', 'teacher', 'music-video', 'short-film']
     }
   },
   watch: {
     current() {
       const next = this.view[this.current]
-      console.log({ next })
       this.$router.push(next)
     }
   },
@@ -63,6 +62,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 *,

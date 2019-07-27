@@ -82,14 +82,20 @@ export default {
       font-size: 1rem;
     }
     &-content {
-      margin-top: 3rem;
       justify-content: center;
+    }
+    &-video {
+      height: 10rem;
     }
     &-video,
     &-description {
       margin-bottom: 1rem;
       width: 100%;
       font-size: 1.2rem;
+    }
+    &-description {
+      max-width: 50vh;
+      overflow-y: scroll;
     }
     &-play {
       font-size: 2rem;

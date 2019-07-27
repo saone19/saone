@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .footer {
-  color: #666;
+  color: #fff;
   position: absolute;
   bottom: 1rem;
   left: 2rem;
