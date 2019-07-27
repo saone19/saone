@@ -69,6 +69,9 @@ export default {
     &-detail {
       margin: 0.5rem 0;
     }
+    &-svg {
+      min-height: 100%;
+    }
   }
 }
 
