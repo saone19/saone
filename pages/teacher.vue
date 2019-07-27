@@ -100,6 +100,7 @@ export default {
       border-radius: 0;
       flex-wrap: wrap;
       &-img {
+        margin-top: 3rem;
         width: 50%;
       }
       &-txt {

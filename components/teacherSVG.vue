@@ -3,7 +3,7 @@
     class="teacher-svg"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 10 1900 1000"
+    viewBox="0 20 1900 1000"
   >
     <defs>
       <linearGradient
@@ -1294,7 +1294,8 @@ export default {
 
 <style lang="scss" scoped>
 .teacher-svg {
-  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
