@@ -1294,7 +1294,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .maki {
   color: $theme-dark-orange;
   background-color: rgb(3, 0, 69);

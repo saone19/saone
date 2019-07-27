@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .humberger {
   cursor: pointer;
   position: fixed;

@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .movie {
   color: lightblue;
   @include fullpage();

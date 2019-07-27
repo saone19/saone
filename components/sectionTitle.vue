@@ -13,7 +13,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .section-title {
   opacity: 0.8;
   font-size: 5rem;

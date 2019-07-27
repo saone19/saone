@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .carousel {
   @include fullpage();
   display: flex;

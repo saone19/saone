@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .challengers {
   @include fullpage();
   display: flex;

@@ -1,9 +1,10 @@
 <template>
   <div class="index">
-    <s-top id="top" />
-    <s-introduction id="introduction" />
-    <s-maki id="maki" />
-    <s-movie id="movie" />
+    <transition name="view" mode="out-in">
+      <s-top v-if="currentView === 'top'" />
+      <s-introduction v-else-if="currentView === 'introduction'" />
+      <s-maki v-else-if="currentView === 'maki'" />
+    </transition>
   </div>
 </template>
 
@@ -26,7 +27,12 @@ export default {
     return {
       current: 0,
       scrolling: false,
-      anchors: ['top', 'introduction', 'maki', 'movie']
+      view: ['top', 'introduction', 'maki']
+    }
+  },
+  computed: {
+    currentView() {
+      return this.view[this.current]
     }
   },
   mounted() {
@@ -35,52 +41,69 @@ export default {
       passive: false
     })
     window.ontouchmove = e => e.preventDefault()
-    window.addEventListener(
-      'hashchange',
-      () => {
-        document
-          .getElementById(window.location.hash.replace('#', '') || 'home')
-          .scrollIntoView({ behavior: 'smooth' })
-      },
-      false
-    )
+
     window.onmousewheel = ({ deltaY }) => {
       const threshold = 0
+
       if (this.scrolling) {
         return
       }
 
       if (this.current !== 0 && deltaY < -threshold) {
         this.current -= 1
-      } else if (
-        this.current !== this.anchors.length - 1 &&
-        deltaY > threshold
-      ) {
+      } else if (this.current !== this.view.length - 1 && deltaY > threshold) {
         this.current += 1
       }
 
-      document
-        .getElementById(this.anchors[this.current])
-        .scrollIntoView({ behavior: 'smooth' })
-      window.history.pushState(
-        {},
-        null,
-        window.location.pathname + '#' + this.anchors[this.current]
-      )
       this.scrolling = true
       setTimeout(() => {
         this.scrolling = false
-      }, 1000)
+      }, 300)
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 .index {
   overflow: hidden;
-  height: 300vh;
+  height: 100vh;
   width: 100vw;
+}
+
+.view-enter-active {
+  animation: view-in 0.5s;
+}
+.view-leave-active {
+  animation: view-out 0.5s;
+}
+
+.slide-fade-enter-to {
+  opacity: 1;
+}
+.slide-fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes view-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes view-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 </style>

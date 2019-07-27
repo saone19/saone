@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/color.scss';
+@import '../assets/_global.scss';
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -41,11 +41,6 @@ html {
 html {
   background-size: 200% 200%;
   background-color: rgb(3, 0, 69);
-  //background-image: linear-gradient(
-  //  20deg,
-  //  $theme-dark-orange,
-  //  $theme-demo-light-orange,
-  //  $theme-demo-orange
-  //);
+  background-image: linear-gradient(to right, #151846, #273b63, #151846 50%);
 }
 </style>
