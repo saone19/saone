@@ -2,14 +2,14 @@
   <div class="index">
     <transition name="view" mode="out-in">
       <s-top v-if="currentView === 'top'" />
-      <s-introduction v-else-if="currentView === 'introduction'" />
+      <s-challenger v-else-if="currentView === 'challenger'" />
       <s-maki v-else-if="currentView === 'maki'" />
     </transition>
   </div>
 </template>
 
 <script>
-import SIntroduction from '../components/introduction'
+import SChallenger from '../components/challenger'
 //import SCarousel from '../components/carousel'
 import SMovie from '../components/movie'
 import SMaki from '../components/maki'
@@ -19,7 +19,7 @@ export default {
   components: {
     STop,
     //    SCarousel,
-    SIntroduction,
+    SChallenger,
     SMaki,
     SMovie
   },
@@ -27,7 +27,7 @@ export default {
     return {
       current: 0,
       scrolling: false,
-      view: ['top', 'introduction', 'maki']
+      view: ['top', 'challenger', 'maki']
     }
   },
   computed: {
@@ -88,7 +88,7 @@ export default {
 
 @keyframes view-in {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.5) rotate(30deg);
     opacity: 0;
   }
   100% {
@@ -102,7 +102,7 @@ export default {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.5) rotate(-30deg);
     opacity: 0;
   }
 }

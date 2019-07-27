@@ -1,9 +1,11 @@
 <template>
   <section class="maki">
+    <div></div>
     <svg
+      class="maki-svg"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 10 1940 1000"
+      viewBox="0 10 1900 1000"
     >
       <defs>
         <linearGradient
@@ -695,7 +697,6 @@
           <stop offset="0.98" stop-color="#f8bf80" />
         </linearGradient>
       </defs>
-      <title>introduction-ori</title>
       <g style="isolation: isolate">
         <g id="bg">
           <rect x="5" y="13.77" width="1918" height="1078" style="fill: #030045" />
@@ -1278,7 +1279,7 @@ export default {
       const y = clientY - window.innerHeight / 2
 
       TweenMax.to('#dolphin-1', 1, {
-        transform: `translate3d(${x / 4}px,${y / 4}px,0)`
+        transform: `translate3d(${x / 2}px,${y / 2}px,0)`
       })
 
       TweenMax.to('#surfing-girl', 1, {
@@ -1286,7 +1287,7 @@ export default {
       })
 
       TweenMax.to('#dolphin-2', 1, {
-        transform: `translate3d(${-x / 20}px,${-y / 20}px,0)`
+        transform: `translate3d(${-x / 15}px,${-y / 15}px,0)`
       })
     })
   }
@@ -1299,9 +1300,8 @@ export default {
   color: $theme-dark-orange;
   background-color: rgb(3, 0, 69);
   @include fullpage();
-}
-svg {
-  margin: auto;
-  height: 100%;
+  &-svg {
+    width: 100%;
+  }
 }
 </style>

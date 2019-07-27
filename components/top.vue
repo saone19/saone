@@ -468,7 +468,6 @@
           xlink:href="#linear-gradient-41"
         />
       </defs>
-      <title>top</title>
       <g style="isolation: isolate">
         <g id="Layer_3" data-name="Layer 3">
           <path
