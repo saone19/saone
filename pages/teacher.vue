@@ -41,7 +41,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
     &-img {
       width: 40%;
       margin: 1rem;
@@ -67,6 +66,7 @@ export default {
       height: 100vh;
       background: rgba(0, 0, 0, 0.8);
       border-radius: 0;
+      flex-wrap: wrap;
       &-img {
         width: 50%;
       }
