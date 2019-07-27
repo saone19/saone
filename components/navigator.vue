@@ -19,10 +19,11 @@
               :key="link.name"
               class="nav-list-item"
               :style="{ '--i': i }"
+              @click="close"
               @mouseover="navHover(i)"
               @mouseleave="navLeave"
             >
-              <a :href="link.url" @click="close">{{ link.name }}</a>
+              <nuxt-link :to="link.url">{{ link.name }}</nuxt-link>
             </li>
           </transition-group>
           <div class="nav-list-img-wrapper">
