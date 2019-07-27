@@ -44,12 +44,11 @@ export default {
       hover: -1,
       preview: ['hotpink', 'white', 'cyan', 'yellowgreen', 'skyblue', 'ivory'],
       links: [
-        { url: '/#top', name: 'HOMEPAGE' },
-        { url: '/#introduction', name: 'INTRODUCTION' },
-        { url: '/#movie', name: 'MOVIE' },
-        { url: '/#', name: 'MV' },
-        { url: '/#', name: 'PROFILE' },
-        { url: '/#', name: 'BEHIND THE SCENE' }
+        { url: '/', name: 'HOMEPAGE' },
+        { url: '/introduction', name: 'INTRODUCTION' },
+        { url: '/teacher', name: 'TEACHER' },
+        { url: '/short-film', name: 'SHORT FILM' },
+        { url: '/music-video', name: 'MUSIC VIDEO' }
       ]
     }
   },

@@ -4,9 +4,18 @@
       <img class="teacher-profile-img" :src="require('~/assets/maki.png')" alt="teacher" />
       <div class="teacher-profile-txt">
         <h1 class="teacher-profile-name">EBATA YAMADA MAKIKO</h1>
-        <p
-          class="teacher-profile-detail"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+        <ul class="teacher-profile-detail-list">
+          <li class="teacher-profile-detail">Teacher of Core English SA 1 Class</li>
+          <li class="teacher-profile-detail">Master in TESOL</li>
+          <li
+            class="teacher-profile-detail"
+          >Teacher in Digital Hollywood University, Tokyo (Since 2006)</li>
+          <li
+            class="teacher-profile-detail"
+          >Teacher of Writing for ESL in Hawaii Pacific University (2005-2006)</li>
+          <li class="teacher-profile-detail">Surfer from Chiba</li>
+        </ul>
       </div>
     </div>
     <s-teacher-svg class="teacher-profile-svg" />
@@ -47,17 +56,37 @@ export default {
     }
     &-txt {
       padding: 1rem;
-      color: #fff;
+      color: #ccc;
       width: 60%;
       text-align: left;
       height: 80%;
       border-left: 2px solid #666;
     }
     &-name {
+      color: aquamarine;
       margin-bottom: 2rem;
+    }
+    &-detail {
+      margin: 0.5rem 0;
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .teacher {
+    &-profile {
+      margin: 10vh auto;
+      width: 80vw;
+      height: 80vh;
+      &-svg {
+        height: 100%;
+        width: unset;
+        right: -5vw;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .teacher {
     &-profile {

@@ -1,24 +1,24 @@
 <template>
-  <main class="challenger">
-    <h2 class="challenger-title">
+  <main class="introduction">
+    <h2 class="introduction-title">
       WE’RE CHALLENGERS FROM
       <transition name="country-fade" mode="out-in">
         <span :key="country" class="country">{{ country }}.</span>
       </transition>
     </h2>
-    <div class="challenger-wrapper">
-      <s-challenger-svg class="challenger-svg" />
+    <div class="introduction-wrapper">
+      <s-introduction-svg class="introduction-svg" />
     </div>
   </main>
 </template>
 
 <script>
 import { TweenMax, TimelineMax, Elastic, Back } from 'gsap'
-import SChallengerSvg from '../components/challengerSvg'
+import SIntroductionSvg from '../components/introductionSvg'
 
 export default {
   components: {
-    SChallengerSvg
+    SIntroductionSvg
   },
   data() {
     return {
@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss">
 @import '../assets/_global.scss';
-.challenger {
+.introduction {
   @include fullpage();
   display: flex;
   &-title {
@@ -82,7 +82,7 @@ export default {
   font-size: 3rem;
   vertical-align: middle;
 }
-.challenger {
+.introduction {
   &-svg {
     position: absolute;
     bottom: 0;
@@ -95,7 +95,7 @@ export default {
   }
 }
 @media screen and (max-width: 900px) {
-  .challenger {
+  .introduction {
     &-title {
       margin-top: 35vh;
     }
@@ -106,7 +106,7 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
-  .challenger {
+  .introduction {
     &-title {
       margin-top: 25vh;
     }
