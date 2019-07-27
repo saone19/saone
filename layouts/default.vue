@@ -13,6 +13,40 @@ export default {
   components: {
     SLogo,
     SNavigator
+  },
+  data() {
+    return {
+      current: 0,
+      navigating: false,
+      view: ['/', 'challenger', 'teacher', 'short-film']
+    }
+  },
+  watch: {
+    current() {
+      const next = this.view[this.current]
+      console.log({ next })
+      this.$router.push(next)
+    }
+  },
+  mounted() {
+    window.onmousewheel = ({ deltaY }) => {
+      const threshold = 0
+
+      if (this.navigating) {
+        return
+      }
+
+      if (this.current !== 0 && deltaY < -threshold) {
+        this.current -= 1
+      } else if (this.current !== this.view.length - 1 && deltaY > threshold) {
+        this.current += 1
+      }
+
+      this.navigating = true
+      setTimeout(() => {
+        this.navigating = false
+      }, 300)
+    }
   }
 }
 </script>
@@ -40,7 +74,14 @@ html {
 
 html {
   background-size: 200% 200%;
-  background-color: rgb(3, 0, 69);
   background-image: linear-gradient(to right, #151846, #273b63, #151846 50%);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 </style>

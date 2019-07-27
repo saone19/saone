@@ -1,39 +1,31 @@
 <template>
-  <section class="movie">
-    <div class="movie-container">
-      <h2 class="movie-title">
-        Challenge
-        <span class="movie-time">10 min</span>
-      </h2>
-      <div class="movie-content">
-        <div data-aos="fade-up-right" class="movie-video"></div>
-        <div data-aos="fade-up-left" class="movie-info">
-          <p class="movie-info-txt">Director Daron iusdcisdc wdicu wec weciuibi</p>
-          <p class="movie-info-txt">qwdiuhwedjkn wehweuhd weudue wedweuh fjgjvfyxggi erv.</p>
-
-          <p class="movie-play">
-            <strong>play</strong>
-          </p>
+  <section class="content">
+    <div class="content-container">
+      <h2 class="content-title">{{title}}</h2>
+      <div class="content-content">
+        <div data-aos="fade-up-right" class="content-video"></div>
+        <div data-aos="fade-up-left" class="content-description">
+          <slot />
         </div>
       </div>
     </div>
-
-    <s-section-title text="Movie" />
+    <s-content-svg />
     <s-footer />
   </section>
 </template>
 
 <script>
-//import 'aos/dist/aos.css'
 import SFooter from '../components/footer'
-//import AOS from 'aos'
 import sSectionTitle from './sectionTitle'
+import SContentSvg from '../components/contentSvg'
 
 export default {
   components: {
+    SContentSvg,
     sSectionTitle,
     SFooter
   },
+  props: ['title'],
   data() {
     return {}
   },
@@ -46,14 +38,14 @@ export default {
 
 <style lang="scss">
 @import '../assets/_global.scss';
-.movie {
+.content {
   color: lightblue;
   @include fullpage();
   display: flex;
   &-title {
     font-size: 5rem;
   }
-  &-time {
+  &-byline {
     display: block;
     font-size: 2rem;
   }
@@ -72,12 +64,9 @@ export default {
     height: 15rem;
     background-color: #ccc;
   }
-  &-info {
+  &-description {
     width: 48%;
-    font-size: 2rem;
-    &-txt {
-      margin-bottom: 2rem;
-    }
+    font-size: 1.6rem;
   }
   &-play {
     font-size: 3rem;
@@ -85,7 +74,7 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
-  .movie {
+  .content {
     &-title {
       font-size: 3rem;
     }
@@ -97,13 +86,10 @@ export default {
       justify-content: center;
     }
     &-video,
-    &-info {
+    &-description {
       margin-bottom: 1rem;
       width: 100%;
-      font-size: 1.4rem;
-      &-txt {
-        margin-bottom: 1rem;
-      }
+      font-size: 1.2rem;
     }
     &-play {
       font-size: 2rem;

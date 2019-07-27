@@ -6,6 +6,34 @@ $theme-light-orange: #ee4540;
 $theme-demo-orange: #f08500;
 $theme-demo-light-orange: #f6a900;
 
+.page-enter-active {
+  animation: page-in 0.5s;
+}
+.page-leave-active {
+  animation: page-out 0.5s;
+}
+
+@keyframes page-in {
+  0% {
+    transform: translateY(1rem); //rotate(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes page-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(-1rem); //rotate(-30deg);
+    opacity: 0;
+  }
+}
+
 @mixin fullpage {
   position: relative;
   width: 100vw;
