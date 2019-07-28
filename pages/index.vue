@@ -3,8 +3,7 @@
     <div class="index-title-wrapper">
       <h1 id="index-title" class="index-title">
         The
-        <br />SAONE
-        <br />Project
+        <br />SAONE <br />Project
       </h1>
     </div>
     <s-index-svg />
@@ -29,8 +28,8 @@ export default {
   width: 100vw;
   &-title {
     opacity: 0;
-    transition: all .3s ease-in-out;
-    &-wrapper{
+    transition: all 0.3s ease-in-out;
+    &-wrapper {
       z-index: 100;
       width: 100vw;
       top: 2rem;
@@ -61,8 +60,8 @@ export default {
     &-title {
       color: #fff;
       text-shadow: 0 0 1rem #000;
-      margin-right:0;
-      &-wrapper{
+      margin-right: 0;
+      &-wrapper {
         justify-content: center;
       }
     }
