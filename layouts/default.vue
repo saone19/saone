@@ -29,26 +29,31 @@ export default {
     }
   },
   mounted() {
-    const handleNavigation = deltaY => {
-      const threshold = 0
 
-      if (this.navigating) {
-        return
-      }
-
+    const setNavigating = ()=>{
       this.navigating = true
       setTimeout(() => {
         this.navigating = false
       }, 1000)
+    }
 
+    const handleNavigation = (deltaY,threshold) => {
+
+      if (this.navigating) {
+        return
+      }
+      
       if (this.current !== 0 && deltaY < -threshold) {
         this.current -= 1
+        setNavigating()
       } else if (this.current !== this.view.length - 1 && deltaY > threshold) {
         this.current += 1
+        setNavigating()
       }
+
     }
     window.addEventListener('mousewheel', ({ deltaY }) =>
-      handleNavigation(deltaY)
+      handleNavigation(deltaY,0)
     )
 
     window.addEventListener(
@@ -60,8 +65,8 @@ export default {
     window.addEventListener(
       'touchmove',
       e => {
-        deltaY = this.touchY - e.touches[0].pageY
-        handleNavigation(deltaY)
+        const deltaY = this.touchY - e.touches[0].pageY
+        handleNavigation(deltaY,100)
       },
       false
     )

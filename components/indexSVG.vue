@@ -1778,9 +1778,12 @@ export default {
   #boy,
   #girl,
   #flower,
-  #leaf,
+  #leaf {
+    transform: scale(0.55) translateY(95vh) translateX(-10vh);
+  }
+
   #plants {
-    transform: scale(0.55) translateY(105vh);
+    transform: scale(0.55) translateY(120vh) translateX(-10vh);
   }
 }
 </style>

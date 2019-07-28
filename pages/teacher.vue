@@ -52,6 +52,7 @@ export default {
     justify-content: space-around;
     &-img {
       width: 30%;
+      min-height: 200px;
       margin: 3rem;
     }
     &-txt {
@@ -68,6 +69,9 @@ export default {
     }
     &-detail {
       margin: 0.5rem 0;
+      &-list{
+        padding-left: 1rem;
+      }
     }
     &-svg {
       min-height: 100%;
@@ -104,7 +108,8 @@ export default {
       border-radius: 0;
       flex-wrap: wrap;
       &-img {
-        margin-top: 3rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
         width: 45%;
       }
       &-txt {

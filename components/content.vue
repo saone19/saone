@@ -112,4 +112,18 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .content {
+    &-container{
+      margin-top: 5rem;
+    }
+    &-title{
+      margin-bottom: 5rem;
+    }
+    &-media{
+      margin-bottom: 3rem;
+    }
+  }
+}
 </style>
