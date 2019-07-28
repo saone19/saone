@@ -1,17 +1,17 @@
 <template>
   <div>
-    <s-logo />
     <s-navigator />
     <nuxt />
+    <s-footer />
   </div>
 </template>
 
 <script>
-import SLogo from '../components/logo'
 import SNavigator from '../components/navigator'
+import SFooter from '../components/footer'
 export default {
   components: {
-    SLogo,
+    SFooter,
     SNavigator
   },
   data() {

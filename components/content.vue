@@ -12,18 +12,15 @@
       </div>
     </div>
     <s-content-svg />
-    <s-footer />
   </section>
 </template>
 
 <script>
-import SFooter from '../components/footer'
 import SContentSvg from '../components/contentSvg'
 
 export default {
   components: {
-    SContentSvg,
-    SFooter
+    SContentSvg
   },
   props: {
     title: {
@@ -91,8 +88,9 @@ export default {
 @media screen and (max-width: 900px) {
   .content {
     &-title {
-      margin-bottom: 0;
+      margin-top: 3rem;
       font-size: 3rem;
+      margin-bottom: 5rem;
     }
     &-time {
       font-size: 1rem;
@@ -105,12 +103,12 @@ export default {
     }
     &-media,
     &-description {
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       width: 100%;
       font-size: 1.2rem;
     }
     &-description {
-      max-width: 50vh;
+      max-height: 50vh;
       overflow-y: scroll;
     }
     &-play {
@@ -121,14 +119,11 @@ export default {
 
 @media screen and (max-width: 640px) {
   .content {
-    &-container {
-      margin-top: 5rem;
-    }
     &-title {
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
     }
     &-media {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
   }
 }
