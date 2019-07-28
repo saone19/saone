@@ -14,7 +14,8 @@ module.exports = {
       { name: ' theme-color', content: '#f08500' },
       {
         name: 'keywords',
-        content: 'digital hollywood university,dhu,study in japan,music video,shot film,web design,japan'
+        content:
+          'digital hollywood university,dhu,study in japan,music video,shot film,web design,japan'
       },
       {
         name: 'description',
@@ -72,7 +73,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-    }
+    extend(config, ctx) {}
   }
 }

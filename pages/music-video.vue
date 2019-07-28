@@ -11,7 +11,12 @@
     </template>
 
     <template v-slot:description>
-      <p>Jessie J's Price Tag rewritten in different languages. The singers in this team are challenged to sing in a new language and teach their native language to others. A project that combines musical, videography, and creativity.</p>
+      <p>
+        Jessie J's Price Tag rewritten in different languages. The singers in
+        this team are challenged to sing in a new language and teach their
+        native language to others. A project that combines musical, videography,
+        and creativity.
+      </p>
     </template>
   </s-content>
 </template>

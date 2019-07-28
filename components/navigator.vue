@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div :class="[{ 'humberger--open': open }, 'humberger']" @click="toggleOpen">
+    <div
+      :class="[{ 'humberger--open': open }, 'humberger']"
+      @click="toggleOpen"
+    >
       <span class="humberger-line"></span>
       <span class="humberger-line"></span>
     </div>
@@ -28,7 +31,11 @@
           </transition-group>
           <div class="nav-list-img-wrapper">
             <transition name="wrapper-fade" mode="out-in">
-              <div :key="hover" class="nav-list-img" :style="{ background: preview[hover] }"></div>
+              <div
+                :key="hover"
+                class="nav-list-img"
+                :style="{ background: preview[hover] }"
+              ></div>
             </transition>
           </div>
         </nav>

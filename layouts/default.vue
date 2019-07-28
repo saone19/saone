@@ -29,20 +29,18 @@ export default {
     }
   },
   mounted() {
-
-    const setNavigating = ()=>{
+    const setNavigating = () => {
       this.navigating = true
       setTimeout(() => {
         this.navigating = false
       }, 1000)
     }
 
-    const handleNavigation = (deltaY,threshold) => {
-
+    const handleNavigation = (deltaY, threshold) => {
       if (this.navigating) {
         return
       }
-      
+
       if (this.current !== 0 && deltaY < -threshold) {
         this.current -= 1
         setNavigating()
@@ -50,10 +48,9 @@ export default {
         this.current += 1
         setNavigating()
       }
-
     }
     window.addEventListener('mousewheel', ({ deltaY }) =>
-      handleNavigation(deltaY,0)
+      handleNavigation(deltaY, 0)
     )
 
     window.addEventListener(
@@ -66,7 +63,7 @@ export default {
       'touchmove',
       e => {
         const deltaY = this.touchY - e.touches[0].pageY
-        handleNavigation(deltaY,100)
+        handleNavigation(deltaY, 100)
       },
       false
     )

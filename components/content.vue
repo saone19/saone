@@ -1,7 +1,7 @@
 <template>
   <section class="content">
     <div class="content-container">
-      <h2 class="content-title">{{title}}</h2>
+      <h2 class="content-title">{{ title }}</h2>
       <div class="content-content">
         <div data-aos="fade-up-right" class="content-media">
           <slot name="media" />
@@ -18,16 +18,19 @@
 
 <script>
 import SFooter from '../components/footer'
-import sSectionTitle from './sectionTitle'
 import SContentSvg from '../components/contentSvg'
 
 export default {
   components: {
     SContentSvg,
-    sSectionTitle,
     SFooter
   },
-  props: ['title'],
+  props: {
+    title: {
+      default: '',
+      type: String
+    }
+  },
   data() {
     return {}
   },
@@ -115,13 +118,13 @@ export default {
 
 @media screen and (max-width: 640px) {
   .content {
-    &-container{
+    &-container {
       margin-top: 5rem;
     }
-    &-title{
+    &-title {
       margin-bottom: 5rem;
     }
-    &-media{
+    &-media {
       margin-bottom: 3rem;
     }
   }

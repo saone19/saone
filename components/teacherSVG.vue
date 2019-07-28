@@ -697,7 +697,13 @@
     </defs>
     <g style="isolation: isolate">
       <g id="bg">
-        <rect x="5" y="13.77" width="1918" height="1078" style="fill: #030045" />
+        <rect
+          x="5"
+          y="13.77"
+          width="1918"
+          height="1078"
+          style="fill: #030045"
+        />
       </g>
       <g id="wave">
         <g style="opacity: 0.15;mix-blend-mode: screen">
@@ -847,7 +853,12 @@
         <circle cx="729" cy="279.77" r="9" style="fill: #d8eaea" />
         <circle cx="754" cy="187.77" r="13" style="fill: #d8eaea" />
         <circle cx="1276.5" cy="305.27" r="15.5" style="fill: #d8eaea" />
-        <circle cx="340" cy="435.77" r="15" style="fill: url(#teacher-gradient-17)" />
+        <circle
+          cx="340"
+          cy="435.77"
+          r="15"
+          style="fill: url(#teacher-gradient-17)"
+        />
         <circle cx="263.5" cy="588.27" r="16.5" style="fill: #d8eaea" />
         <circle
           cx="629"
@@ -911,7 +922,12 @@
         <circle cx="1068.5" cy="272.27" r="7.5" style="fill: #fff" />
         <circle cx="1132" cy="195.77" r="8" style="fill: #fff" />
         <circle cx="1170.5" cy="260.27" r="4.5" style="fill: #fff" />
-        <circle cx="619.5" cy="221.27" r="3.5" style="fill: url(#teacher-gradient-21)" />
+        <circle
+          cx="619.5"
+          cy="221.27"
+          r="3.5"
+          style="fill: url(#teacher-gradient-21)"
+        />
         <circle cx="1540" cy="982.77" r="13" style="fill: #d8eaea" />
         <circle
           cx="1415"
@@ -925,8 +941,18 @@
           r="4.5"
           style="mix-blend-mode: screen;fill: url(#teacher-gradient-22)"
         />
-        <circle cx="1448.5" cy="996.27" r="7.5" style="fill: url(#teacher-gradient-23)" />
-        <circle cx="1405.5" cy="1016.27" r="3.5" style="fill: url(#teacher-gradient-24)" />
+        <circle
+          cx="1448.5"
+          cy="996.27"
+          r="7.5"
+          style="fill: url(#teacher-gradient-23)"
+        />
+        <circle
+          cx="1405.5"
+          cy="1016.27"
+          r="3.5"
+          style="fill: url(#teacher-gradient-24)"
+        />
         <circle
           cx="672.5"
           cy="142.27"
@@ -934,7 +960,12 @@
           style="mix-blend-mode: screen;fill: url(#teacher-gradient-25)"
         />
         <circle cx="229.5" cy="548.27" r="5.5" style="fill: #fff" />
-        <circle cx="346" cy="480.77" r="6" style="fill: url(#teacher-gradient-26)" />
+        <circle
+          cx="346"
+          cy="480.77"
+          r="6"
+          style="fill: url(#teacher-gradient-26)"
+        />
         <circle cx="367.5" cy="391.27" r="12.5" style="fill: #fff" />
         <circle cx="197" cy="608.77" r="15" style="fill: #fff" />
         <circle
@@ -974,7 +1005,12 @@
         />
         <circle cx="1194" cy="211.77" r="6" style="fill: #fff" />
         <circle cx="1326" cy="279.77" r="3" style="fill: #fff" />
-        <circle cx="1403" cy="262.77" r="9" style="fill: url(#teacher-gradient-30)" />
+        <circle
+          cx="1403"
+          cy="262.77"
+          r="9"
+          style="fill: url(#teacher-gradient-30)"
+        />
         <circle cx="1546" cy="283.77" r="12" style="fill: #fff" />
         <circle
           cx="1491"
@@ -995,9 +1031,21 @@
           style="mix-blend-mode: screen;fill: url(#teacher-gradient-33)"
         />
         <circle cx="1794" cy="278.77" r="10" style="fill: #addbdf" />
-        <ellipse cx="1854.5" cy="264.27" rx="6.5" ry="13.5" style="fill: #fff" />
+        <ellipse
+          cx="1854.5"
+          cy="264.27"
+          rx="6.5"
+          ry="13.5"
+          style="fill: #fff"
+        />
         <circle cx="1165.5" cy="118.27" r="14.5" style="fill: #fff" />
-        <ellipse cx="1106.5" cy="154.77" rx="16.5" ry="17" style="fill: #addbdf" />
+        <ellipse
+          cx="1106.5"
+          cy="154.77"
+          rx="16.5"
+          ry="17"
+          style="fill: #addbdf"
+        />
         <circle
           cx="427"
           cy="245.77"
@@ -1240,14 +1288,6 @@ export default {
       time: 0.3,
       from: { y: 20 },
       to: { y: 0, ease: Elastic.easeOut.config(1, 0.8) }
-    }
-    const fadeIn = {
-      from: {
-        opacity: 0
-      },
-      to: {
-        opacity: 1
-      }
     }
     const dolphin = {
       from: {

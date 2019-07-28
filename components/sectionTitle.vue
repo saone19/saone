@@ -1,5 +1,7 @@
 <template>
-  <h2 class="section-title" :style="{ '--content': `'${text}'` }">{{ text }}</h2>
+  <h2 class="section-title" :style="{ '--content': `'${text}'` }">
+    {{ text }}
+  </h2>
 </template>
 
 <script>

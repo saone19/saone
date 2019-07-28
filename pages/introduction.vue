@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { TweenMax, TimelineMax, Elastic, Back } from 'gsap'
 import SIntroductionSvg from '../components/introductionSvg'
 
 export default {

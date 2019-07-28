@@ -364,7 +364,11 @@
           style="fill: #076986"
         />
         <g>
-          <path d="M625.27,2122.27Z" transform="translate(54.35 -1699)" style="fill: #076986" />
+          <path
+            d="M625.27,2122.27Z"
+            transform="translate(54.35 -1699)"
+            style="fill: #076986"
+          />
           <path
             d="M625.43,2122.26h-.16a.48.48,0,0,1,.2.08.7.7,0,0,0-.7,0c-1.15.78-1.71,2.72-2.2,4-.28.71-1.76,3.48-.3,3.73,1.19.2,1.66-2.67,1.94-3.44a18.59,18.59,0,0,1,1-2.52,3.68,3.68,0,0,0,.52-1A.49.49,0,0,0,625.43,2122.26Z"
             transform="translate(54.35 -1699)"
@@ -599,6 +603,8 @@
 </template>
 
 <script>
+import { TweenMax, Back } from 'gsap'
+
 export default {
   mounted() {
     window.addEventListener('mousemove', ({ clientX, clientY }) => {
