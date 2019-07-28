@@ -80,12 +80,18 @@ module.exports = {
     // '@nuxtjs/eslint-module'
   ],
   /*
+   ** Generate configuration
+   */
+  generate: {
+    routes: ['404']
+  },
+  /*
    ** Build configuration
    */
   build: {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   }
 }

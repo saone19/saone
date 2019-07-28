@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "node --max-old-space-size=4096 node_modules/.bin/nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
-    "gen": "nuxt generate",
+    "gen": "nuxt generate && mv dist/404/index.html dist/404.html && rm -r dist/404",
     "deploy": "firebase deploy --only hosting "
   },
   "dependencies": {
