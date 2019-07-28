@@ -56,8 +56,21 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
+  webfontloader: {
+    google: {
+      families: [
+        // 'Gugi',
+        // 'Megrim',
+        // 'Federant',
+        // 'Metamorphous',
+        'Macondo Swash Caps'
+        // 'Gabriela'
+      ]
+    }
+  },
   modules: [
     '@nuxtjs/pwa',
+    'nuxt-webfontloader',
     [
       '@nuxtjs/google-analytics',
       {
@@ -73,6 +86,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   }
 }

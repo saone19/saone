@@ -1728,6 +1728,12 @@ export default {
         fadeIn.from,
         fadeIn.to
       )
+      .fromTo(
+        '#index-title',
+        appear.time,
+        fadeIn.from,
+        fadeIn.to
+      )
 
     TweenMax.to('#flower', 1.5, moving.flower)
     TweenMax.to(
@@ -1811,17 +1817,15 @@ export default {
   .svg {
     position: relative;
   }
-  #building-left,
-  #building-right-behind,
-  #building-right-front,
-  #building-middle,
+
   #boy,
   #girl,
   #flower,
   #leaf {
-    transform: scale(0.55) translateY(95vh) translateX(-10vh);
+    transform: scale(0.55) translateY(105vh) translateX(-10vh);
   }
 
+  #building,
   #plants {
     transform: scale(0.55) translateY(120vh) translateX(-10vh);
   }

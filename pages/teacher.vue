@@ -1,25 +1,19 @@
 <template>
   <main class="teacher">
     <div class="teacher-profile">
-      <img
-        class="teacher-profile-img"
-        :src="require('~/assets/maki.png')"
-        alt="teacher"
-      />
+      <img class="teacher-profile-img" :src="require('~/assets/maki.png')" alt="teacher" />
       <div class="teacher-profile-txt">
         <h1 class="teacher-profile-name">EBATA YAMADA MAKIKO</h1>
 
         <ul class="teacher-profile-detail-list">
-          <li class="teacher-profile-detail">
-            Teacher of Core English SA 1 Class
-          </li>
+          <li class="teacher-profile-detail">Teacher of Core English SA 1 Class</li>
           <li class="teacher-profile-detail">Master in TESOL</li>
-          <li class="teacher-profile-detail">
-            Teacher in Digital Hollywood University, Tokyo (Since 2006)
-          </li>
-          <li class="teacher-profile-detail">
-            Teacher of Writing for ESL in Hawaii Pacific University (2005-2006)
-          </li>
+          <li
+            class="teacher-profile-detail"
+          >Teacher in Digital Hollywood University, Tokyo (Since 2006)</li>
+          <li
+            class="teacher-profile-detail"
+          >Teacher of Writing for ESL in Hawaii Pacific University (2005-2006)</li>
           <li class="teacher-profile-detail">Surfer from Chiba</li>
         </ul>
       </div>
@@ -70,6 +64,7 @@ export default {
       border-left: 2px solid #666;
     }
     &-name {
+      font-family: serif;
       color: aquamarine;
       margin-bottom: 2rem;
     }

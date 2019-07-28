@@ -44,12 +44,14 @@ export default {
 <style lang="scss">
 @import '../assets/_global.scss';
 .content {
-  color: lightblue;
+  color: aliceblue;
   @include fullpage();
   display: flex;
   &-title {
     font-size: 5rem;
     margin-bottom: 2rem;
+    font-family: 'Macondo Swash Caps';
+    text-shadow: 0 0 1rem #000;
   }
   &-byline {
     display: block;
@@ -57,7 +59,7 @@ export default {
   }
   &-container {
     width: 80%;
-    margin: 1rem auto;
+    margin: 2rem auto;
   }
   &-content {
     display: flex;
@@ -73,6 +75,7 @@ export default {
       width: 100%;
       height: 100%;
       border: 0;
+      box-shadow: 0 0 1rem #222;
     }
   }
   &-description {
