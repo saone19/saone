@@ -79,6 +79,11 @@ export default {
           url: '/short-film',
           name: 'SHORT FILM',
           thumbnail: require('~/assets/thumbnail-short-film.png')
+        },
+        {
+          url: '/about-us',
+          name: 'ABOUT US',
+          thumbnail: require('~/assets/thumbnail-about-us.png')
         }
       ]
     }

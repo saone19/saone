@@ -26,7 +26,8 @@ export default {
         '/introduction',
         '/teacher',
         '/music-video',
-        '/short-film'
+        '/short-film',
+        '/about-us'
       ]
     }
   },
