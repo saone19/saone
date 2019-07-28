@@ -19,7 +19,14 @@ export default {
       touchY: 0,
       current: 0,
       navigating: false,
-      view: ['/', '/introduction', '/teacher', '/music-video', '/short-film']
+      view: [
+        '/',
+        '/logo',
+        '/introduction',
+        '/teacher',
+        '/music-video',
+        '/short-film'
+      ]
     }
   },
   watch: {

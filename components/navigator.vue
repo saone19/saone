@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      :class="[{ 'humberger--open': open }, 'humberger']"
-      @click="toggleOpen"
-    >
+    <div :class="[{ 'humberger--open': open }, 'humberger']" @click="toggleOpen">
       <span class="humberger-line"></span>
       <span class="humberger-line"></span>
     </div>
@@ -56,27 +53,32 @@ export default {
         {
           url: '/',
           name: 'HOMEPAGE',
-          thumbnail: require('~/assets/thumbnail-1.png')
+          thumbnail: require('~/assets/thumbnail-index.png')
+        },
+        {
+          url: '/logo',
+          name: 'LOGO',
+          thumbnail: require('~/assets/thumbnail-logo.png')
         },
         {
           url: '/introduction',
           name: 'INTRODUCTION',
-          thumbnail: require('~/assets/thumbnail-2.png')
+          thumbnail: require('~/assets/thumbnail-introduction.png')
         },
         {
           url: '/teacher',
           name: 'TEACHER',
-          thumbnail: require('~/assets/thumbnail-3.png')
+          thumbnail: require('~/assets/thumbnail-teacher.png')
         },
         {
           url: '/music-video',
           name: 'MUSIC VIDEO',
-          thumbnail: require('~/assets/thumbnail-4.png')
+          thumbnail: require('~/assets/thumbnail-music-video.png')
         },
         {
           url: '/short-film',
           name: 'SHORT FILM',
-          thumbnail: require('~/assets/thumbnail-5.png')
+          thumbnail: require('~/assets/thumbnail-short-film.png')
         }
       ]
     }
