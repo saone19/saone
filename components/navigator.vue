@@ -29,15 +29,17 @@
               <nuxt-link :to="link.url">{{ link.name }}</nuxt-link>
             </li>
           </transition-group>
-          <div class="nav-list-img-wrapper">
-            <transition name="wrapper-fade" mode="out-in">
-              <div
+
+          <transition name="wrapper-fade" mode="out-in">
+            <div v-if="hover !== -1" class="nav-list-img-wrapper">
+              <img
                 :key="hover"
                 class="nav-list-img"
-                :style="{ background: preview[hover] }"
-              ></div>
-            </transition>
-          </div>
+                :src="links[hover].thumbnail"
+                :alt="links[hover].name"
+              />
+            </div>
+          </transition>
         </nav>
       </div>
     </transition>
@@ -50,13 +52,32 @@ export default {
     return {
       open: false,
       hover: -1,
-      preview: ['hotpink', 'white', 'cyan', 'yellowgreen', 'skyblue', 'ivory'],
       links: [
-        { url: '/', name: 'HOMEPAGE' },
-        { url: '/introduction', name: 'INTRODUCTION' },
-        { url: '/teacher', name: 'TEACHER' },
-        { url: '/short-film', name: 'SHORT FILM' },
-        { url: '/music-video', name: 'MUSIC VIDEO' }
+        {
+          url: '/',
+          name: 'HOMEPAGE',
+          thumbnail: require('~/assets/thumbnail-1.png')
+        },
+        {
+          url: '/introduction',
+          name: 'INTRODUCTION',
+          thumbnail: require('~/assets/thumbnail-2.png')
+        },
+        {
+          url: '/teacher',
+          name: 'TEACHER',
+          thumbnail: require('~/assets/thumbnail-3.png')
+        },
+        {
+          url: '/short-film',
+          name: 'SHORT FILM',
+          thumbnail: require('~/assets/thumbnail-4.png')
+        },
+        {
+          url: '/music-video',
+          name: 'MUSIC VIDEO',
+          thumbnail: require('~/assets/thumbnail-5.png')
+        }
       ]
     }
   },
@@ -173,6 +194,7 @@ export default {
     &-img {
       width: 30vw;
       height: 30vh;
+      object-fit: cover;
       &-wrapper {
         margin-left: 10vh;
         height: 100%;
