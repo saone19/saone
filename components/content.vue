@@ -3,9 +3,11 @@
     <div class="content-container">
       <h2 class="content-title">{{title}}</h2>
       <div class="content-content">
-        <div data-aos="fade-up-right" class="content-video"></div>
+        <div data-aos="fade-up-right" class="content-media">
+          <slot name="media" />
+        </div>
         <div data-aos="fade-up-left" class="content-description">
-          <slot />
+          <slot name="description" />
         </div>
       </div>
     </div>
@@ -52,22 +54,28 @@ export default {
   }
   &-container {
     width: 80%;
-    margin: 5rem auto;
+    margin: 1rem auto;
   }
   &-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
-  &-video {
+  &-media {
     width: 48%;
-    height: 15rem;
-    background-color: #ccc;
+    height: 20rem;
+    background-color: #000;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   }
   &-description {
     width: 48%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
   }
   &-play {
     font-size: 3rem;
@@ -86,10 +94,10 @@ export default {
     &-content {
       justify-content: center;
     }
-    &-video {
+    &-media {
       height: 10rem;
     }
-    &-video,
+    &-media,
     &-description {
       margin-bottom: 1rem;
       width: 100%;

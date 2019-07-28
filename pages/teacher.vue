@@ -51,8 +51,8 @@ export default {
     align-items: center;
     justify-content: space-around;
     &-img {
-      width: 40%;
-      margin: 1rem;
+      width: 30%;
+      margin: 3rem;
     }
     &-txt {
       padding: 1rem;
@@ -81,6 +81,10 @@ export default {
       margin: 10vh auto;
       width: 80vw;
       height: 80vh;
+      &-img {
+        margin: 0;
+        padding-left: 1rem;
+      }
       &-svg {
         height: 100%;
         width: unset;
@@ -101,7 +105,7 @@ export default {
       flex-wrap: wrap;
       &-img {
         margin-top: 3rem;
-        width: 50%;
+        width: 45%;
       }
       &-txt {
         border-left: none;
