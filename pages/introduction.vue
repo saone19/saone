@@ -23,7 +23,7 @@ export default {
     return {
       count: 0,
       countries: [
-        'JANPAN🇯🇵',
+        'JAPAN🇯🇵',
         'KOREA🇰🇷',
         'HONGKONG🇭🇰',
         'SHANGHAI🇨🇳',
