@@ -366,4 +366,9 @@ export default {
   margin-top: -5rem;
   width: 30%;
 }
+@media screen and (max-width: 640px) {
+  #after {
+    width: 45%;
+  }
+}
 </style>
