@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      :class="[{ 'humberger--open': open }, 'humberger']"
-      @click="toggleOpen"
-    >
+    <div :class="[{ 'humberger--open': open }, 'humberger']" @click="toggleOpen">
       <span class="humberger-line"></span>
       <span class="humberger-line"></span>
     </div>
@@ -69,13 +66,13 @@ export default {
           thumbnail: require('~/assets/thumbnail-3.png')
         },
         {
-          url: '/short-film',
-          name: 'SHORT FILM',
+          url: '/music-video',
+          name: 'MUSIC VIDEO',
           thumbnail: require('~/assets/thumbnail-4.png')
         },
         {
-          url: '/music-video',
-          name: 'MUSIC VIDEO',
+          url: '/short-film',
+          name: 'SHORT FILM',
           thumbnail: require('~/assets/thumbnail-5.png')
         }
       ]
