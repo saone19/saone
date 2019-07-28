@@ -9,6 +9,7 @@
 <script>
 import SNavigator from '../components/navigator'
 import SFooter from '../components/footer'
+import { constants } from 'crypto'
 export default {
   components: {
     SFooter,
@@ -36,6 +37,11 @@ export default {
     }
   },
   mounted() {
+    const path = this.$router.currentRoute.fullPath
+    const pathIndex = this.view.indexOf(path)
+    if (pathIndex !== -1) {
+      this.current = pathIndex
+    }
     const setNavigating = () => {
       this.navigating = true
       setTimeout(() => {
