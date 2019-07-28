@@ -51,6 +51,7 @@ export default {
     align-items: center;
     justify-content: space-around;
     &-img {
+      object-fit: contain;
       width: 30%;
       min-height: 200px;
       margin: 3rem;
@@ -69,7 +70,7 @@ export default {
     }
     &-detail {
       margin: 0.5rem 0;
-      &-list{
+      &-list {
         padding-left: 1rem;
       }
     }
