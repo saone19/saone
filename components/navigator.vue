@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div :class="[{ 'humberger--open': open }, 'humberger']" @click="toggleOpen">
+    <div
+      :class="[{ 'humberger--open': open }, 'humberger']"
+      @click="toggleOpen"
+    >
       <span class="humberger-line"></span>
       <span class="humberger-line"></span>
     </div>

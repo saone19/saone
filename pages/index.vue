@@ -3,8 +3,7 @@
     <div class="index-title-wrapper">
       <h1 id="index-title" class="index-title">
         The
-        <br />SAONE
-        <br />Project
+        <br />SAONE <br />Project
       </h1>
     </div>
     <s-index-svg />

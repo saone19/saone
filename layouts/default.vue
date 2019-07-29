@@ -7,9 +7,9 @@
 </template>
 
 <script>
+import { constants } from 'crypto'
 import SNavigator from '../components/navigator'
 import SFooter from '../components/footer'
-import { constants } from 'crypto'
 export default {
   components: {
     SFooter,

@@ -277,61 +277,61 @@ export default {
       }
     }
 
-    tl //.fromTo('#s', appear.time, appear.from, appear.to)
-      //.fromTo('#description-s', appear.time, appear.from, appear.to)
-      //.to('#s-path', animation.time, {
-      //  rotation: 90,
-      //  transformOrigin: '50% 50%'
-      //})
-      //.fromTo('#add-1', appear.time, appear.from, appear.to)
-      //.fromTo('#a', appear.time, appear.from, appear.to)
-      //.fromTo('#description-a', appear.time, appear.from, appear.to)
-      //.to('#a-line', animation.time, {
-      //  strokeWidth: 1,
-      //  strokeDasharray: '5,5'
-      //})
-      //.fromTo('#add-2', appear.time, appear.from, appear.to)
-      //.fromTo('#one', appear.time, appear.from, appear.to)
-      //
-      //.fromTo('#description-one', appear.time, appear.from, appear.to)
-      //.to(['#n', '#e'], animation.time, fade.to)
-      //.to('#o-circle', animation.time, {
-      //  strokeWidth: 0,
-      //  fill: '#fff',
-      //  transform: 'translateX(5rem)'
-      //})
-      //.to(
-      //  [
-      //    '#add-1',
-      //    '#add-2',
-      //    '#description-s',
-      //    '#description-a',
-      //    '#description-one'
-      //  ],
-      //  animation.time,
-      //  fade.to
-      //)
-      //.to('#s', animation.time, {
-      //  ...fade.to,
-      //  transform: 'translateX(2rem)'
-      //})
-      //.to(
-      //  '#one',
-      //  animation.time,
-      //  {
-      //    ...fade.to,
-      //    transform: 'translateX(-2rem)'
-      //  },
-      //  '-=0.5'
-      //)
-      //.to(
-      //  '#a',
-      //  animation.time,
-      //  {
-      //    ...fade.to
-      //  },
-      //  '-=0.5'
-      //)
+    tl.fromTo('#s', appear.time, appear.from, appear.to)
+      .fromTo('#description-s', appear.time, appear.from, appear.to)
+      .to('#s-path', animation.time, {
+        rotation: 90,
+        transformOrigin: '50% 50%'
+      })
+      .fromTo('#add-1', appear.time, appear.from, appear.to)
+      .fromTo('#a', appear.time, appear.from, appear.to)
+      .fromTo('#description-a', appear.time, appear.from, appear.to)
+      .to('#a-line', animation.time, {
+        strokeWidth: 1,
+        strokeDasharray: '5,5'
+      })
+      .fromTo('#add-2', appear.time, appear.from, appear.to)
+      .fromTo('#one', appear.time, appear.from, appear.to)
+
+      .fromTo('#description-one', appear.time, appear.from, appear.to)
+      .to(['#n', '#e'], animation.time, fade.to)
+      .to('#o-circle', animation.time, {
+        strokeWidth: 0,
+        fill: '#fff',
+        transform: 'translateX(5rem)'
+      })
+      .to(
+        [
+          '#add-1',
+          '#add-2',
+          '#description-s',
+          '#description-a',
+          '#description-one'
+        ],
+        animation.time,
+        fade.to
+      )
+      .to('#s', animation.time, {
+        ...fade.to,
+        transform: 'translateX(2rem)'
+      })
+      .to(
+        '#one',
+        animation.time,
+        {
+          ...fade.to,
+          transform: 'translateX(-2rem)'
+        },
+        '-=0.5'
+      )
+      .to(
+        '#a',
+        animation.time,
+        {
+          ...fade.to
+        },
+        '-=0.5'
+      )
       .to('#before', 0.1, {
         display: 'none'
       })

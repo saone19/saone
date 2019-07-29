@@ -3,11 +3,15 @@
     <div class="group-container">
       <h1 class="group-title">About Us</h1>
 
-      <transition-group name="group-figure" class="group-figure-wrapper" tag="div">
+      <transition-group
+        name="group-figure"
+        class="group-figure-wrapper"
+        tag="div"
+      >
         <div
-          class="group-figure group-figure-item"
           v-for="group in show"
           :key="group"
+          class="group-figure group-figure-item"
           @click="select(group)"
         >
           <img
@@ -15,7 +19,7 @@
             :src="require(`../assets/group-${toCamelCase(group)}.png`)"
             :alt="`${group} Group`"
           />
-          <p class="group-figure-name">{{group}}</p>
+          <p class="group-figure-name">{{ group }}</p>
         </div>
       </transition-group>
 
@@ -42,6 +46,15 @@ export default {
       groups: ['Short Film', 'Website', 'Music Video']
     }
   },
+  computed: {
+    show() {
+      if (!this.selected) {
+        return this.groups
+      }
+      return this.groups.filter(name => this.selected === name)
+    }
+  },
+  mounted() {},
   methods: {
     select(name) {
       if (this.selected) {
@@ -53,16 +66,7 @@ export default {
     toCamelCase(str) {
       return str.replace(' ', '-').toLowerCase()
     }
-  },
-  computed: {
-    show() {
-      if (!this.selected) {
-        return this.groups
-      }
-      return this.groups.filter(name => this.selected === name)
-    }
-  },
-  mounted() {}
+  }
 }
 </script>
 
