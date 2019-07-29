@@ -15,6 +15,7 @@
             :src="require(`../assets/group-${toCamelCase(group)}.png`)"
             :alt="`${group} Group`"
           />
+          <p class="group-figure-name">{{group}}</p>
         </div>
       </transition-group>
 
@@ -71,6 +72,7 @@ export default {
     position: relative;
     width: 80%;
     margin: 2rem auto;
+    overflow: hidden;
   }
   &-title {
     color: aliceblue;
@@ -82,17 +84,36 @@ export default {
   &-figure {
     display: flex;
     align-items: center;
+    position: relative;
     cursor: pointer;
+
+    &:hover {
+      .group-figure-img {
+        opacity: 0.6;
+      }
+      .group-figure-name {
+        transform: translateY(-5px);
+      }
+    }
+    &-name {
+      transition: all 0.3s ease-in-out;
+      font-size: 2rem;
+      width: 80%;
+      left: 10%;
+      position: absolute;
+      bottom: 3rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 5px;
+      border-radius: 5px;
+      color: #fff;
+    }
     &-img {
       height: 60vh;
       object-fit: contain;
       transition: all 0.3s ease-in-out;
       width: 25vw;
-      opacity: 0.6;
       filter: drop-shadow(0 0 1rem #222);
-      &:hover {
-        opacity: 1;
-      }
     }
     &-wrapper {
       margin: 0 auto;
@@ -141,7 +162,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .group {
     &-title {
       margin-top: 3rem;
@@ -151,14 +172,29 @@ export default {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .group {
+    &-figure {
+      &-name {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .group {
     &-title {
-      margin-bottom: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
     &-figure {
       width: 50%;
       justify-content: space-around;
+      &-name {
+        width: 90%;
+        left: 5%;
+      }
       &-img {
         height: 30vh;
         width: 40vw;

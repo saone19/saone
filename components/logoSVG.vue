@@ -216,12 +216,18 @@
         <path
           d="M984.38,324.66v152.4a3,3,0,0,0,1.46,2.54l117.6,67.9c4,2.29,9.79,7.35,14.35,8.28,4,.82,8-2.89,11.42-4.84l68.53-39.56,55-31.78a3,3,0,0,0,1.46-2.54V324.66a3,3,0,0,0-1.46-2.54l-117.59-67.9c-4-2.29-9.8-7.35-14.35-8.28-4-.82-8,2.89-11.42,4.84l-68.53,39.56-55,31.78c-3.28,1.89-.32,7,3,5.09l81.92-47.3,44.1-25.46c1.16-.67,4-1.66,4.77-2.76,1.54-2.24-.27,1.08-1.53-.53,1.89,2.41,7.38,4.26,10,5.77l101.42,58.55,16.43,9.49c1,.56,2.41,1.81,3.53,2-1.12-.22,0-3.19-1.11-1.18-1.56,2.81,0,11,0,14.19v90.43c0,14.11-2.09,30.06,0,44.05.19,1.26-.69,3.68.72,1.29s-.32-.44-1.48,0c-5,1.95-9.81,5.66-14.44,8.33l-51.87,30L1131.12,543c-2.78,1.61-10.62,4.3-12.29,7.1-1.17,2,.9-.44,1.61.38-.75-.86-2.55-1.48-3.52-2l-96.85-55.92c-9.77-5.63-20.34-14-31-17.89,3.23,1.17,0,3.32,1.21,1,.6-1.09,0-4.28,0-5.5V324.66C990.28,320.87,984.38,320.86,984.38,324.66Z"
           transform="translate(-968.56 -227.79)"
-          style="fill: #fff"
+          fill="transparent"
+          stroke="#607D8B"
+          stroke-width="2"
+          stroke-miterlimit="0"
         />
         <path
           d="M1117.32,233.3l92.33,52.95,49.08,28.14c1.24.71,3.47,2.64,4.92,2.82,2.64.32-.55.09-.23-1.46-.83,4,0,9.1,0,13.15l.39,130.73.06,21.08c0,1.16-.41,3.21,0,4.29-.47-1.21,3-1.71.23-1.35-4.2.55-10.45,6.07-14.06,8.17l-25.37,14.75-61.84,35.95c-13.66,7.94-29.47,14.9-42.08,24.46-1.09.83-3.81,1.37-1,1.42s0-.65-1-1.41c-4.88-3.65-11-6.3-16.27-9.33l-58.43-33.5L988,492c-2.57-1.48-10.31-7.9-13.36-7.66-1.94.15.52,1.6.54,1.54.44-1.16,0-3.44,0-4.65l-.37-124.89-.08-27.12c0-3.45,1.17-9.41,0-12.7,1.1,3-3.05,1.93-.22,1.56,1.68-.22,4.2-2.44,5.65-3.28l20.7-12,111-64.5,8.5-4.95c3.28-1.9.32-7-3-5.09L989,302.83,970.26,313.7a3,3,0,0,0-1.46,2.54l.44,151.14c0,5.41-1.59,13.67.06,18.89,1.31,4.16,7.75,6.23,11.32,8.27L1056.41,538l61.91,35.5a3,3,0,0,0,3,0l95.29-55.4,47.65-27.69c2.57-1.5,4.7-2.16,5.58-5.06,1-3.4,0-8.81,0-12.31l-.39-133.27c0-6.88,0-13.76-.06-20.64,0-3,.3-4.37-1.88-6.55-2.86-2.85-8.35-4.78-11.81-6.77l-24.79-14.21-110.56-63.4C1117,226.32,1114,231.41,1117.32,233.3Z"
           transform="translate(-968.56 -227.79)"
-          style="fill: #fff"
+          fill="transparent"
+          stroke="#607D8B"
+          stroke-width="6"
+          stroke-miterlimit="0"
         />
         <g id="after-o">
           <circle cx="150.75" cy="279.39" r="12.77" style="fill: #fff" />
@@ -271,61 +277,61 @@ export default {
       }
     }
 
-    tl.fromTo('#s', appear.time, appear.from, appear.to)
-      .fromTo('#description-s', appear.time, appear.from, appear.to)
-      .to('#s-path', animation.time, {
-        rotation: 90,
-        transformOrigin: '50% 50%'
-      })
-      .fromTo('#add-1', appear.time, appear.from, appear.to)
-      .fromTo('#a', appear.time, appear.from, appear.to)
-      .fromTo('#description-a', appear.time, appear.from, appear.to)
-      .to('#a-line', animation.time, {
-        strokeWidth: 1,
-        strokeDasharray: '5,5'
-      })
-      .fromTo('#add-2', appear.time, appear.from, appear.to)
-      .fromTo('#one', appear.time, appear.from, appear.to)
-
-      .fromTo('#description-one', appear.time, appear.from, appear.to)
-      .to(['#n', '#e'], animation.time, fade.to)
-      .to('#o-circle', animation.time, {
-        strokeWidth: 0,
-        fill: '#fff',
-        transform: 'translateX(5rem)'
-      })
-      .to(
-        [
-          '#add-1',
-          '#add-2',
-          '#description-s',
-          '#description-a',
-          '#description-one'
-        ],
-        animation.time,
-        fade.to
-      )
-      .to('#s', animation.time, {
-        ...fade.to,
-        transform: 'translateX(2rem)'
-      })
-      .to(
-        '#one',
-        animation.time,
-        {
-          ...fade.to,
-          transform: 'translateX(-2rem)'
-        },
-        '-=0.5'
-      )
-      .to(
-        '#a',
-        animation.time,
-        {
-          ...fade.to
-        },
-        '-=0.5'
-      )
+    tl //.fromTo('#s', appear.time, appear.from, appear.to)
+      //.fromTo('#description-s', appear.time, appear.from, appear.to)
+      //.to('#s-path', animation.time, {
+      //  rotation: 90,
+      //  transformOrigin: '50% 50%'
+      //})
+      //.fromTo('#add-1', appear.time, appear.from, appear.to)
+      //.fromTo('#a', appear.time, appear.from, appear.to)
+      //.fromTo('#description-a', appear.time, appear.from, appear.to)
+      //.to('#a-line', animation.time, {
+      //  strokeWidth: 1,
+      //  strokeDasharray: '5,5'
+      //})
+      //.fromTo('#add-2', appear.time, appear.from, appear.to)
+      //.fromTo('#one', appear.time, appear.from, appear.to)
+      //
+      //.fromTo('#description-one', appear.time, appear.from, appear.to)
+      //.to(['#n', '#e'], animation.time, fade.to)
+      //.to('#o-circle', animation.time, {
+      //  strokeWidth: 0,
+      //  fill: '#fff',
+      //  transform: 'translateX(5rem)'
+      //})
+      //.to(
+      //  [
+      //    '#add-1',
+      //    '#add-2',
+      //    '#description-s',
+      //    '#description-a',
+      //    '#description-one'
+      //  ],
+      //  animation.time,
+      //  fade.to
+      //)
+      //.to('#s', animation.time, {
+      //  ...fade.to,
+      //  transform: 'translateX(2rem)'
+      //})
+      //.to(
+      //  '#one',
+      //  animation.time,
+      //  {
+      //    ...fade.to,
+      //    transform: 'translateX(-2rem)'
+      //  },
+      //  '-=0.5'
+      //)
+      //.to(
+      //  '#a',
+      //  animation.time,
+      //  {
+      //    ...fade.to
+      //  },
+      //  '-=0.5'
+      //)
       .to('#before', 0.1, {
         display: 'none'
       })
@@ -365,6 +371,17 @@ export default {
   display: none;
   margin-top: -5rem;
   width: 30%;
+  stroke-dasharray: 200;
+  animation: dash 30s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 5000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 @media screen and (max-width: 640px) {
   #after {

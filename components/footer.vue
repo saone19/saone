@@ -10,5 +10,6 @@
   position: fixed;
   bottom: 1rem;
   left: 2rem;
+  z-index: 100;
 }
 </style>
