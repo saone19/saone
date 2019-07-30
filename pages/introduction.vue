@@ -28,7 +28,8 @@ export default {
         'HONGKONG🇭🇰',
         'SHANGHAI🇨🇳',
         'MALAYSIA🇲🇾',
-        'INDONESIA🇮🇩'
+        'INDONESIA🇮🇩',
+        'Vietnam🇻🇳'
       ]
     }
   },
