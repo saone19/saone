@@ -3,7 +3,11 @@
     <div class="index-title-wrapper">
       <h1 id="index-title" class="index-title">
         The
-        <br />SAONE <br />Project
+        <br />SAONE <br class="index-title-small-wrap" /><small
+          class="index-title-small"
+          >& SATWO</small
+        >
+        <br />Project
       </h1>
     </div>
     <s-index-svg />
@@ -37,7 +41,14 @@ export default {
       display: flex;
       justify-content: flex-end;
     }
-    margin-right: 10rem;
+    &-small {
+      font-size: 2rem;
+      color: deeppink;
+      &-wrap {
+        display: none;
+      }
+    }
+    margin-right: 5rem;
     text-align: left;
     color: #fff;
     text-shadow: 0 0 1rem #000;
@@ -51,6 +62,10 @@ export default {
   .index {
     &-title {
       font-size: 4rem;
+      &-small {
+        font-size: 1.4rem;
+        color: #fff;
+      }
     }
   }
 }
@@ -74,6 +89,12 @@ export default {
       text-shadow: 0 0 10px #000;
       margin-top: 3rem;
       margin-right: -2rem;
+      &-small {
+        font-size: 2rem;
+        &-wrap {
+          display: block;
+        }
+      }
     }
   }
 }
