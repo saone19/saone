@@ -18,7 +18,6 @@ export default {
   data() {
     return {
       touchY: 0,
-      current: 0,
       navigating: false,
       view: [
         '/',
@@ -31,18 +30,22 @@ export default {
       ]
     }
   },
-  watch: {
-    current() {
-      const next = this.view[this.current]
+  methods: {
+    direction(direction) {
+      const currentIndex = this.view.findIndex(
+        path => path === this.$route.path
+      )
+
+      console.log(currentIndex)
+      const next = this.view[
+        direction === 'down' ? currentIndex + 1 : currentIndex - 1
+      ]
+      // console.log({ next, route: this.$route.path })
+      if (!next) return
       this.$router.push(next)
     }
   },
   mounted() {
-    const path = this.$router.currentRoute.fullPath
-    const pathIndex = this.view.indexOf(path)
-    if (pathIndex !== -1) {
-      this.current = pathIndex
-    }
     const setNavigating = () => {
       this.navigating = true
       setTimeout(() => {
@@ -55,17 +58,20 @@ export default {
         return
       }
 
-      if (this.current !== 0 && deltaY < -threshold) {
-        this.current -= 1
+      if (this.$route.path !== '/' && deltaY < -threshold) {
+        this.direction('up')
         setNavigating()
-      } else if (this.current !== this.view.length - 1 && deltaY > threshold) {
-        this.current += 1
+      } else if (
+        this.$route.path !== this.view.length - 1 &&
+        deltaY > threshold
+      ) {
+        this.direction('down')
         setNavigating()
       }
     }
-    window.addEventListener('mousewheel', ({ deltaY }) =>
+    window.addEventListener('wheel', ({ deltaY }) => {
       handleNavigation(deltaY, 0)
-    )
+    })
 
     window.addEventListener(
       'touchstart',
