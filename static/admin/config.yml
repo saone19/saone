@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: 'static/uploads'
+
+collections:
+  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: 'Blog' # Used in the UI
+    folder: '_posts/blog' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Time Created', name: 'time', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Video code',
+          name: 'videoCode',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Image Link', name: 'link', widget: 'image', required: false }
+      - {
+          label: 'Team photo',
+          name: 'teamPhoto',
+          widget: 'image',
+          required: false,
+        }
+      - { label: 'Team members', name: 'members', widget: 'list' }

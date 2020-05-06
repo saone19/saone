@@ -23,16 +23,16 @@ module.exports = {
       },
       { name: 'og:title', content: 'SAONE Project' },
       { name: 'og:site_name', content: 'SAONE' },
-      { name: 'og:url', content: 'saone.digital' },
+      { name: 'og:url', content: 'saone.netlify.app' },
       {
         name: 'og:description',
         content: process.env.npm_package_description || ''
       },
       { name: 'og:type', content: 'website' },
-      { name: 'og:image', content: 'https://saone.digital/ogp.png' },
+      { name: 'og:image', content: 'https://saone.netlify.app/ogp.png' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: 'SAONE Project' },
-      { name: 'twitter:domain', content: 'saone.digital' },
+      { name: 'twitter:domain', content: 'saone.netlify.app' },
       { name: 'twitter:creator', content: '@nerd_yue' },
       {
         name: 'twitter:description',
@@ -92,6 +92,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   }
 }

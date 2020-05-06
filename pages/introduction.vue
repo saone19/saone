@@ -17,7 +17,7 @@ import SIntroductionSvg from '../components/introductionSvg'
 
 export default {
   components: {
-    SIntroductionSvg
+    SIntroductionSvg,
   },
   data() {
     return {
@@ -29,20 +29,20 @@ export default {
         'SHANGHAI🇨🇳',
         'MALAYSIA🇲🇾',
         'INDONESIA🇮🇩',
-        'Vietnam🇻🇳'
-      ]
+        'Vietnam🇻🇳',
+      ],
     }
   },
   computed: {
     country() {
       return this.countries[this.count % this.countries.length]
-    }
+    },
   },
   mounted() {
     window.setInterval(() => {
       this.count += 1
     }, 2000)
-  }
+  },
 }
 </script>
 
