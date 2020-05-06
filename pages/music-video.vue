@@ -25,7 +25,7 @@
 import SContent from '../components/content'
 export default {
   components: {
-    SContent
-  }
+    SContent,
+  },
 }
 </script>

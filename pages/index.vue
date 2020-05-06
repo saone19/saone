@@ -3,10 +3,9 @@
     <div class="index-title-wrapper">
       <h1 id="index-title" class="index-title">
         The
-        <br />SAONE <br class="index-title-small-wrap" /><small
-          class="index-title-small"
-          >& SATWO</small
-        >
+        <br />SAONE
+        <br class="index-title-small-wrap" />
+        <small class="index-title-small">& SATWO</small>
         <br />Project
       </h1>
     </div>
@@ -19,8 +18,8 @@ import SIndexSvg from '../components/indexSVG'
 
 export default {
   components: {
-    SIndexSvg
-  }
+    SIndexSvg,
+  },
 }
 </script>
 

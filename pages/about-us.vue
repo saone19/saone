@@ -3,11 +3,7 @@
     <div class="group-container">
       <h1 class="group-title">About Us</h1>
 
-      <transition-group
-        name="group-figure"
-        class="group-figure-wrapper"
-        tag="div"
-      >
+      <transition-group name="group-figure" class="group-figure-wrapper" tag="div">
         <div
           v-for="group in show"
           :key="group"
@@ -43,7 +39,7 @@ export default {
   data() {
     return {
       selected: '',
-      groups: ['Short Film', 'Website', 'Music Video']
+      groups: ['Short Film', 'Website', 'Music Video'],
     }
   },
   computed: {
@@ -51,8 +47,8 @@ export default {
       if (!this.selected) {
         return this.groups
       }
-      return this.groups.filter(name => this.selected === name)
-    }
+      return this.groups.filter((name) => this.selected === name)
+    },
   },
   mounted() {},
   methods: {
@@ -65,8 +61,8 @@ export default {
     },
     toCamelCase(str) {
       return str.replace(' ', '-').toLowerCase()
-    }
-  }
+    },
+  },
 }
 </script>
 
