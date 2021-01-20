@@ -19,7 +19,7 @@
     "aos": "^2.3.4",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
-    "gsap": "2",
+    "gsap": "3",
     "node-sass": "^4.13.1",
     "nuxt": "^2.12.2",
     "nuxt-webfontloader": "^1.1.0",
