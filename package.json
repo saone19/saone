@@ -20,7 +20,7 @@
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "gsap": "2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.12.2",
     "nuxt-webfontloader": "^1.1.0",
     "sass-loader": "^8.0.2"
