@@ -58,7 +58,6 @@ export default {
     &-img {
       object-fit: contain;
       width: 30%;
-      min-height: 200px;
       margin: 3rem;
     }
     &-txt {
@@ -117,7 +116,7 @@ export default {
       &-img {
         margin-top: 5rem;
         margin-bottom: 2rem;
-        width: 45%;
+        width: 40%;
       }
       &-txt {
         border-left: none;

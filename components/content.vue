@@ -105,7 +105,8 @@ export default {
     &-description {
       margin-bottom: 3rem;
       width: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      line-height: 1.4rem;
     }
     &-description {
       max-height: 50vh;
